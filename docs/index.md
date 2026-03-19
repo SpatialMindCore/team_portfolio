@@ -192,14 +192,21 @@ const galleryImages = [
 <style>
 /* 首页特定样式 */
 
-/* Hero 区域：仅约束说明文字（tagline）的宽度，避免影响主标题换行 */
-.VPHomeHero.has-image .tagline {
-  max-width: 40rem !important;
-}
+/* Hero 区域：放宽主内容区域宽度，让标题和说明能更靠右，与英文队名右侧大致对齐 */
+@media (min-width: 960px) {
+  .VPHomeHero.has-image .main {
+    max-width: 48rem !important; /* 调大主内容宽度上限 */
+  }
 
-/* Hero 区域：将 LOGO 往右移动，避免挤压标题 */
-.VPHomeHero .image {
-  margin-left: 15rem;
+  /* 仅约束说明文字（tagline）的宽度，避免过长一行影响阅读 */
+  .VPHomeHero.has-image .tagline {
+    max-width: 42rem !important;
+  }
+
+  /* Hero 区域：将 LOGO 往右移动，避免挤压标题 */
+  .VPHomeHero .image {
+    margin-left: 7rem;
+  }
 }
 
 /* 保证英文队名在单行内显示，不再把 Team) 挤到下一行 */
