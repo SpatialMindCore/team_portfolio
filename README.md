@@ -1,6 +1,13 @@
-# 工程技术团队作品集网站
+# 空间智能工程团队作品集网站
 
 使用 VitePress 构建的专业工程技术团队主页，展示我们在三维视觉、SLAM、AI 工程和系统架构领域的技术能力。
+
+## 部署到 Gitee Pages
+
+仓库：**[gitee.com/ylin97/siteam](https://gitee.com/ylin97/siteam)**  
+线上地址：**`https://ylin97.gitee.io/siteam/`**（用户名以你的 Gitee 账号为准）
+
+详细步骤见 **`docs/deploy-gitee.md`**。概要：`npm run build` 后，将 **`docs/.vitepress/dist/`** 目录内的全部文件发布到 Gitee Pages 指定分支的根目录。
 
 ## 快速开始
 
@@ -23,7 +30,10 @@ npm run preview
 ```
 Team_Portfolio_Website/
 ├── docs/
+│   ├── .vitepress/
+│   │   └── config.ts               # VitePress 配置（含 Gitee base）
 │   ├── index.md                    # 首页
+│   ├── deploy-gitee.md             # Gitee Pages 部署说明
 │   ├── projects/
 │   │   ├── index.md                # 项目列表
 │   │   ├── 3dgs-engine.md          # 3DGS 渲染引擎
@@ -33,13 +43,9 @@ Team_Portfolio_Website/
 │   │   ├── reconstruction-research.md  # 三维重建研究
 │   │   └── bridge-system.md        # 桥梁数字孪生
 │   ├── assets/                     # 静态资源（图片等）
-│   └── public/                     # 公共资源（favicon 等）
-├── .vitepress/
-│   ├── config.ts                   # VitePress 配置
+│   └── public/                     # 公共资源（favicon、LOGO 等）
+├── .vitepress/                     # 可选：主题扩展（与 docs 根配置分离时请自行合并）
 │   └── theme/
-│       ├── index.ts                # 主题入口
-│       └── styles/
-│           └── custom.css          # 自定义样式
 ├── package.json
 └── tsconfig.json
 ```

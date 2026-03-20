@@ -18,8 +18,8 @@
     "types": ["vitepress/client"]
   },
   "include": [
-    ".vitepress/**/*.ts",
-    ".vitepress/**/*.vue"
+    "docs/.vitepress/**/*.ts",
+    "docs/.vitepress/**/*.vue"
   ],
   "exclude": [
     "node_modules"

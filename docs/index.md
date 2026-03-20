@@ -34,42 +34,50 @@ features:
 ---
 
 <script setup>
+import { withBase } from 'vitepress'
+
+/** Gitee Pages 子路径部署：站内链接需带 base，且 cleanUrls:false 时需 .html 后缀 */
+function pageUrl(path) {
+  const p = path.endsWith('/') ? `${path}index.html` : `${path.replace(/\/$/, '')}.html`
+  return withBase(p)
+}
+
 const projects = [
   {
     name: '3DGS 渲染引擎',
     description: '基于 Vulkan 的高性能渲染引擎，采用计算着色器管线和 RenderGraph 调度架构。',
     tags: ['Vulkan', '3DGS', '计算着色器', 'RenderGraph'],
-    link: '/projects/3dgs-engine'
+    link: pageUrl('/projects/3dgs-engine')
   },
   {
     name: '测量系统 (3DGS)',
     description: '图像/视频到三维重建系统，带有 GPS 尺度恢复功能，用于大尺寸物体自动测量。',
     tags: ['3DGS', '重建', 'GPS', '测量'],
-    link: '/projects/measurement-system'
+    link: pageUrl('/projects/measurement-system')
   },
   {
     name: 'SLAM + 无人机系统',
     description: '语义 SLAM 系统，集成 VINS-Fusion、RTK/IMU/视觉融合、FUEL 自主探索和 PX4 飞控。',
     tags: ['SLAM', '无人机', 'VINS', 'PX4'],
-    link: '/projects/slam-system'
+    link: pageUrl('/projects/slam-system')
   },
   {
     name: '大模型 Agent 平台',
     description: '多智能体平台，采用 Planner/Tool/Memory 架构，支持 vLLM 推理和 RAG 知识库。',
     tags: ['LLM', 'Agent', 'vLLM', 'RAG'],
-    link: '/projects/agent-platform'
+    link: pageUrl('/projects/agent-platform')
   },
   {
     name: '三维重建研究',
     description: '高性能渲染引擎研究，包括高斯点云优化和渲染 - 语义融合技术。',
     tags: ['研究', '3DGS', '优化'],
-    link: '/projects/reconstruction-research'
+    link: pageUrl('/projects/reconstruction-research')
   },
   {
     name: '桥梁数字孪生 (UE)',
     description: '基于 Unreal Engine 的可视化系统，集成 IoT 数据用于桥梁实时监测。',
     tags: ['Unreal Engine', '数字孪生', 'IoT'],
-    link: '/projects/bridge-system'
+    link: pageUrl('/projects/bridge-system')
   }
 ]
 
@@ -78,37 +86,37 @@ const galleryImages = [
     src: './assets/projects/3dgs-engine/1-moer-ui.png',
     title: '3DGS 引擎编辑器',
     description: '多视图渲染与训练一体化编辑界面',
-    project: '/projects/3dgs-engine'
+    project: pageUrl('/projects/3dgs-engine')
   },
   {
     src: './assets/projects/slam-system/1-example1.png',
     title: '无人机 SLAM 轨迹',
     description: '语义 SLAM 在复杂环境中的实时探索',
-    project: '/projects/slam-system'
+    project: pageUrl('/projects/slam-system')
   },
   {
     src: './assets/projects/agent-platform/1-web-dashboard.png',
     title: 'Agent 平台 Web 控制台',
     description: '多智能体任务与系统状态总览',
-    project: '/projects/agent-platform'
+    project: pageUrl('/projects/agent-platform')
   },
   {
     src: './assets/projects/bridge-system/1-dashboard.png',
     title: '桥梁监测总览',
     description: '关键传感器状态与健康评分仪表盘',
-    project: '/projects/bridge-system'
+    project: pageUrl('/projects/bridge-system')
   },
   {
     src: './assets/projects/measurement-system/1-main.png',
     title: '三维测量主界面',
     description: '从重建到标注的一站式测量工作流',
-    project: '/projects/measurement-system'
+    project: pageUrl('/projects/measurement-system')
   },
   {
     src: './assets/projects/reconstruction-research/1-example1.png',
     title: '高斯重建示例',
     description: '高质量三维重建与渲染研究结果',
-    project: '/projects/reconstruction-research'
+    project: pageUrl('/projects/reconstruction-research')
   }
 ]
 </script>

@@ -1,19 +1,34 @@
 import { defineConfig } from 'vitepress'
 
-// https://vitepress.dev/reference/site-config
+// Gitee Pages 子路径与仓库名一致（前后须带斜杠）
+const BASE = '/siteam/'
+
+// 线上访问：https://<你的用户名>.gitee.io/siteam/
+// 仓库：https://gitee.com/ylin97/siteam
 export default defineConfig({
-  title: '工程技术团队',
-  description: '工程技术团队技术作品集 - 三维视觉、SLAM、大模型 Agent、系统架构',
+  base: BASE,
+
+  title: '空间智能工程团队',
+  description:
+    '空间智能工程团队技术作品集 - 三维视觉、SLAM、大模型 Agent、系统架构',
   lang: 'zh-CN',
-  
+
   head: [
     ['meta', { name: 'theme-color', content: '#3eaf7c' }],
-    ['meta', { name: 'keywords', content: '3DGS, SLAM, AI Agent, 渲染引擎，数字孪生，工程技术团队' }],
-    ['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }]
+    [
+      'meta',
+      {
+        name: 'keywords',
+        content:
+          '3DGS, SLAM, AI Agent, 渲染引擎, 数字孪生, 空间智能工程团队'
+      }
+    ],
+    ['link', { rel: 'icon', href: `${BASE}favicon.svg`, type: 'image/svg+xml' }]
   ],
 
   lastUpdated: true,
-  cleanUrls: true,
+  // Gitee Pages 为纯静态托管，无服务端重写 URL，关闭「干净 URL」避免 404
+  cleanUrls: false,
 
   markdown: {
     lineNumbers: true,
@@ -24,13 +39,11 @@ export default defineConfig({
   },
 
   themeConfig: {
-    // 顶部导航
     nav: [
       { text: '首页', link: '/' },
       { text: '项目', link: '/projects/' }
     ],
 
-    // 侧边栏 - 项目列表
     sidebar: {
       '/projects/': [
         {
@@ -48,24 +61,18 @@ export default defineConfig({
       ]
     },
 
-    // 社交链接
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com' }
-    ],
+    socialLinks: [{ icon: 'github', link: 'https://gitee.com/ylin97' }],
 
-    // 页脚
     footer: {
-      message: '工程技术团队技术作品集',
-      copyright: 'Copyright © 2024 工程技术团队'
+      message: '空间智能工程团队技术作品集',
+      copyright: 'Copyright © 2024 空间智能工程团队'
     },
 
-    // 文档配置
     docFooter: {
       prev: '上一页',
       next: '下一页'
     },
 
-    // 搜索配置
     search: {
       provider: 'local',
       options: {
@@ -90,15 +97,14 @@ export default defineConfig({
       }
     },
 
-    // 大纲配置
     outline: {
       label: '本页内容'
     },
 
-    // 编辑链接
     editLink: {
-      pattern: 'https://github.com/your-org/your-repo/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页面'
+      pattern:
+        'https://gitee.com/ylin97/siteam/edit/master/docs/:path',
+      text: '在 Gitee 上编辑此页面'
     }
   }
 })
