@@ -1,10 +1,9 @@
 import { defineConfig } from 'vitepress'
 
-// Gitee Pages 子路径与仓库名一致（前后须带斜杠）
-const BASE = '/siteam/'
+// GitHub Pages 子路径与仓库名一致（前后须带斜杠）
+// 你的远程仓库：git@github.com:Ylin97/team_portfolio.git
+const BASE = '/team_portfolio/'
 
-// 线上访问：https://<你的用户名>.gitee.io/siteam/
-// 仓库：https://gitee.com/ylin97/siteam
 export default defineConfig({
   base: BASE,
 
@@ -27,8 +26,8 @@ export default defineConfig({
   ],
 
   lastUpdated: true,
-  // Gitee Pages 为纯静态托管，无服务端重写 URL，关闭「干净 URL」避免 404
-  cleanUrls: false,
+  // GitHub Pages 支持目录型页面访问；使用干净 URL 不需要 ".html" 后缀
+  cleanUrls: true,
 
   markdown: {
     lineNumbers: true,
@@ -61,7 +60,7 @@ export default defineConfig({
       ]
     },
 
-    socialLinks: [{ icon: 'github', link: 'https://gitee.com/ylin97' }],
+    socialLinks: [{ icon: 'github', link: 'https://github.com/Ylin97' }],
 
     footer: {
       message: '空间智能工程团队技术作品集',
@@ -103,8 +102,8 @@ export default defineConfig({
 
     editLink: {
       pattern:
-        'https://gitee.com/ylin97/siteam/edit/master/docs/:path',
-      text: '在 Gitee 上编辑此页面'
+        'https://github.com/Ylin97/team_portfolio/edit/main/docs/:path',
+      text: '在 GitHub 上编辑此页面'
     }
   }
 })

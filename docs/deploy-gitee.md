@@ -1,12 +1,14 @@
-# 部署到 Gitee Pages
+# 部署到 GitHub Pages
 
-站点地址：**`https://ylin97.gitee.io/siteam/`**（用户名以你 Gitee 账号为准）
+仓库：**`https://github.com/Ylin97/team_portfolio`**
 
-本仓库已配置 `base: '/siteam/'`，与仓库名 `siteam` 一致。
+本项目已在 `docs/.vitepress/config.ts` 设置：
+- `base: '/team_portfolio/'`
+- `cleanUrls: true`（GitHub Pages 支持目录型访问，不需要 `.html` 后缀）
+
+站点地址（通常）：**`https://Ylin97.github.io/team_portfolio/`**
 
 ## 1. 本地构建
-
-在项目根目录执行：
 
 ```bash
 npm install
@@ -15,62 +17,51 @@ npm run build
 
 构建结果目录：**`docs/.vitepress/dist/`**
 
-## 2. 推送到 Gitee 仓库
+## 2. 部署（推荐：只用 GitHub Pages 分支）
 
-若尚未关联远程：
+### 方式 A：手动把 `dist` 推到 `gh-pages` 分支
 
 ```bash
-git remote add origin https://gitee.com/ylin97/siteam.git
-git branch -M master
-git push -u origin master
+cd docs/.vitepress/dist
+git init
+git checkout -b gh-pages
+git add .
+git commit -m "deploy: github pages"
+git remote add origin git@github.com:Ylin97/team_portfolio.git
+git push -u origin gh-pages --force
+cd ../../..
 ```
 
-（若默认分支是 `main`，请将下文 `master` 换成 `main`，并同步修改 `docs/.vitepress/config.ts` 里 `editLink` 的链接分支名。）
+如果 `gh-pages` 分支已存在，可以先在根仓库里切过去再覆盖提交；核心要求是：**`dist` 目录内的文件**要直接位于该分支的根目录。
 
-## 3. 启用 Gitee Pages
+### 方式 B：使用 `gh-pages` 工具（不想手动 git 时）
 
-1. 打开仓库：<https://gitee.com/ylin97/siteam>
-2. **服务** → **Gitee Pages**（需完成实名认证）
-3. 部署方式任选其一：
+安装：
+```bash
+npm i -D gh-pages
+```
 
-### 方式 A：单独分支只放静态文件（推荐）
+部署：
+```bash
+npx gh-pages -d docs/.vitepress/dist
+```
 
-1. 本地执行 `npm run build`
-2. 将 `docs/.vitepress/dist/` **目录内的所有文件**（不是 dist 文件夹本身）推送到一个分支的根目录，例如分支名 `gitee-pages`：
+## 3. GitHub 上开启 Pages
 
-   ```bash
-   cd docs/.vitepress/dist
-   git init
-   git checkout -b gitee-pages
-   git add .
-   git commit -m "deploy: gitee pages"
-   git remote add origin https://gitee.com/ylin97/siteam.git
-   git push -u origin gitee-pages --force
-   cd ../../..
-   ```
-
-   若该分支已存在，可在原仓库里 `git checkout gitee-pages` 后把 `dist` 内容覆盖提交再推送。
-
-3. 在 Gitee Pages 设置中选择：**分支 `gitee-pages`，目录 `/`**。
-
-### 方式 B：使用 Gitee Go / 流水线
-
-在流水线中执行 `npm ci`、`npm run build`，将 `docs/.vitepress/dist` 的产物发布到 Pages 指定分支或目录（以 Gitee 当前文档为准）。
+GitHub 仓库 → **Settings** → **Pages**：
+- Source 选择：`Deploy from a branch`
+- Branch 选择：`gh-pages`
+- Folder 选择：`/`
 
 ## 4. 更新网站
 
-每次改完文档后：
-
-```bash
-npm run build
-```
-
-再按方式 A 更新 `gitee-pages` 分支中的文件并推送。Pages 更新可能有数分钟延迟。
+每次改完文档后重复：
+1. `npm run build`
+2. 用上面的方式 A/B 推送新的 `dist`。
 
 ## 5. 常见问题
 
 | 现象 | 处理 |
 |------|------|
-| 白屏、静态资源 404 | 确认仓库名仍为 `siteam`，且 `docs/.vitepress/config.ts` 中 `base` 为 `'/siteam/'` |
-| 子页面 404 | 已设置 `cleanUrls: false`，链接会带 `.html`，适合纯静态托管 |
-| 编辑链接打不开 | 将 `editLink` 里的分支名改成与你仓库默认分支一致（`master` 或 `main`） |
+| 样式/图片加载 404 | 检查 `docs/.vitepress/config.ts` 的 `base` 是否为 `'/team_portfolio/'` |
+| 子页面 404 | 保证 `cleanUrls: true`，并且首页脚本中站内链接不带 `.html` 后缀 |

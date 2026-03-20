@@ -2,12 +2,13 @@
 
 使用 VitePress 构建的专业工程技术团队主页，展示我们在三维视觉、SLAM、AI 工程和系统架构领域的技术能力。
 
-## 部署到 Gitee Pages
+## 部署到 GitHub Pages
 
-仓库：**[gitee.com/ylin97/siteam](https://gitee.com/ylin97/siteam)**  
-线上地址：**`https://ylin97.gitee.io/siteam/`**（用户名以你的 Gitee 账号为准）
+仓库：**`https://github.com/Ylin97/team_portfolio`**
 
-详细步骤见 **`docs/deploy-gitee.md`**。概要：`npm run build` 后，将 **`docs/.vitepress/dist/`** 目录内的全部文件发布到 Gitee Pages 指定分支的根目录。
+站点地址（通常）：**`https://Ylin97.github.io/team_portfolio/`**
+
+详细步骤见 **`docs/deploy-gitee.md`**（文件名保留，但内容已更新为 GitHub Pages）。概要：`npm run build` 后，将 **`docs/.vitepress/dist/`** 目录内的全部文件发布到 GitHub Pages 指定分支的根目录（推荐 `gh-pages`）。
 
 ## 快速开始
 
@@ -31,9 +32,9 @@ npm run preview
 Team_Portfolio_Website/
 ├── docs/
 │   ├── .vitepress/
-│   │   └── config.ts               # VitePress 配置（含 Gitee base）
+│   │   └── config.ts               # VitePress 配置（含 GitHub Pages base）
 │   ├── index.md                    # 首页
-│   ├── deploy-gitee.md             # Gitee Pages 部署说明
+│   ├── deploy-gitee.md             # GitHub Pages 部署说明（文件名保留）
 │   ├── projects/
 │   │   ├── index.md                # 项目列表
 │   │   ├── 3dgs-engine.md          # 3DGS 渲染引擎

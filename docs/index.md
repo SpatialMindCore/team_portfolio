@@ -36,9 +36,9 @@ features:
 <script setup>
 import { withBase } from 'vitepress'
 
-/** Gitee Pages 子路径部署：站内链接需带 base，且 cleanUrls:false 时需 .html 后缀 */
+/** GitHub Pages 子路径部署：站内链接需带 base */
 function pageUrl(path) {
-  const p = path.endsWith('/') ? `${path}index.html` : `${path.replace(/\/$/, '')}.html`
+  const p = path.endsWith('/') ? path : `${path.replace(/\/$/, '')}/`
   return withBase(p)
 }
 
