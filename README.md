@@ -1,203 +1,214 @@
 # 空间智能工程团队作品集网站
 
-使用 VitePress 构建的专业工程技术团队主页，展示我们在三维视觉、SLAM、AI 工程和系统架构领域的技术能力。
+面向三维视觉与智能系统工程的专业技术团队展示平台，展示我们在 3D 渲染、SLAM、AI 工程与系统架构领域的技术能力。
 
-## 项目与部署地址
+![Node](https://img.shields.io/badge/node-%3E%3D18-green)
+![License](https://img.shields.io/badge/license-MIT-blue)
+![VitePress](https://img.shields.io/badge/VitePress-1.x-purple)
 
-仓库（SSH）：**`git@github.com:SpatialMindCore/team_portfolio.git`**
+---
 
-GitHub Pages 主页：**`https://spatialmindcore.github.io/team_portfolio/`**
+## 📌 项目与部署地址
 
-详细部署说明：[deploy-github.md](./docs/deploy-github.md)
+- 仓库（SSH）：**`git@github.com:SpatialMindCore/team_portfolio.git`**
+- GitHub Pages：**`https://spatialmindcore.github.io/team_portfolio/`**
+- 部署说明：[deploy-github.md](./docs/deploy-github.md)
 
-## 如何开始配置项目
+---
 
-1. 安装环境
-   - Node.js：建议版本 `>=18`
-2. 拉取项目并进入目录
+## 🚀 快速开始
+
+### 1. 环境要求
+
+- Node.js >= 18
+
+---
+
+### 2. 拉取项目
+
 ```bash
 git clone git@github.com:SpatialMindCore/team_portfolio.git
 cd team_portfolio
-```
-3. 安装依赖
+
+------
+
+### 3. 安装依赖
+
 ```bash
 npm install
 ```
 
-## 构建项目
+------
+
+## 🏗️ 构建项目
 
 ```bash
 npm run build
 ```
 
-产物输出目录：`docs/.vitepress/dist/`
+构建输出目录：
 
-## 本地编译/预览
+```text
+docs/.vitepress/dist/
+```
 
-1. 开发预览（热更新）
+------
+
+## 👀 本地预览
+
+### 开发模式（热更新）
+
 ```bash
 npm run dev
 ```
-2. 生产预览（接近部署效果）
+
+### 生产预览（接近部署效果）
+
 ```bash
 npm run preview
 ```
 
-## 项目结构
+------
 
-```
-Team_Portfolio_Website/
+## 📂 项目结构
+
+```text
+team_portfolio/
 ├── docs/
 │   ├── .vitepress/
-│   │   └── config.ts                   # VitePress 配置（含 GitHub Pages base）
+│   │   └── config.ts                   # VitePress 配置（必须设置 base）
 │   ├── index.md                        # 首页
-│   ├── deploy-github.md                # GitHub Pages 部署说明（文件名保留）
+│   ├── deploy-github.md                # GitHub Pages 部署说明
 │   ├── projects/
-│   │   ├── index.md                    # 项目列表
-│   │   ├── 3dgs-engine.md              # 3DGS 渲染引擎
-│   │   ├── measurement-system.md       # 测量系统
-│   │   ├── slam-system.md              # SLAM + 无人机系统
-│   │   ├── agent-platform.md           # 大模型 Agent 平台
-│   │   ├── reconstruction-research.md  # 三维重建研究
-│   │   └── bridge-system.md            # 桥梁数字孪生
-│   ├── assets/                         # 静态资源（图片等）
-│   └── public/                         # 公共资源（favicon、LOGO 等）
-├── .vitepress/                         # 可选：主题扩展（与 docs 根配置分离时请自行合并）
-│   └── theme/
+│   │   ├── index.md
+│   │   ├── 3dgs-engine.md
+│   │   ├── measurement-system.md
+│   │   ├── slam-system.md
+│   │   ├── agent-platform.md
+│   │   ├── reconstruction-research.md
+│   │   └── bridge-system.md
+│   ├── assets/                         # 文档内资源
+│   └── public/                         # 静态资源（favicon、LOGO 等）
 ├── package.json
 └── tsconfig.json
 ```
 
-## 功能特性
+> ⚠️ `docs/.vitepress/` 是 VitePress 默认配置目录
+> 根目录 `.vitepress/` 非必须，如未使用可删除
 
-- **响应式设计**: 适配桌面、平板和手机
-- **深色模式**: 自动支持深色主题
-- **全文搜索**: 支持中文搜索
-- **语法高亮**: 代码块主题支持
-- **Mermaid 图表**: 支持架构图
-- **SEO 优化**: 元标签和结构化数据
-- **项目画廊**: 展示项目精彩瞬间
+------
 
-## 添加新项目
+## ⚙️ 关键配置（GitHub Pages 必看）
 
-1. 在 `docs/projects/` 目录创建新的 Markdown 文件
-2. 添加 frontmatter 元数据：
-   ```markdown
-   ---
-   title: 项目名称
-   description: 简短描述
-   ---
-   ```
-3. 更新 `.vitepress/config.ts` 侧边栏配置
-4. 在 `docs/projects/index.md` 项目列表中添加项目
+如果部署到：
 
-## 自定义
-
-### 主题颜色
-
-编辑 `.vitepress/theme/styles/custom.css`：
-
-```css
-:root {
-  --vp-c-brand: #3eaf7c;       /* 主品牌色 */
-  --vp-c-brand-light: #5bc98f; /* 浅色变体 */
-  --vp-c-brand-dark: #2d8f63;  /* 深色变体 */
-}
+```text
+https://spatialmindcore.github.io/team_portfolio/
 ```
 
-### 站点配置
+必须在配置中设置：
 
-编辑 `.vitepress/config.ts`：
-
-```typescript
+```ts
+// docs/.vitepress/config.ts
 export default defineConfig({
-  title: '你的团队名称',
-  description: '你的描述',
-  // ...
+  base: '/team_portfolio/',
 })
 ```
 
-## 部署
+> ⚠️ 否则静态资源（JS / CSS）会加载失败
 
-### 方案一：部署到 GitHub Pages
+------
 
-1）安装 `gh-pages`：
+## ✨ 功能特性
 
-```shell
-npm i -D gh-pages
-```
+- 响应式设计（桌面 / 平板 / 手机）
+- 深色模式支持
+- 中文全文搜索
+- 代码语法高亮
+- Mermaid 图表支持
+- SEO 优化（Meta / 结构化数据）
+- 项目画廊展示
 
-2）构建并部署：
+------
 
-```bash
-# 构建
-npm run build
+## ➕ 添加新项目
 
-# 部署（发布到 gh-pages 分支，Folder 选 /）
-npx gh-pages -d docs/.vitepress/dist -b gh-pages
-```
+1）在 `docs/projects/` 创建 Markdown 文件
 
-然后在 GitHub 仓库里启用 Pages：
-- Settings -> Pages
-- Source: `Deploy from a branch`
-- Branch: `gh-pages`
-- Folder: `/`
-
-### 方案二：部署到 Vercel
-
-1. 连接仓库到 Vercel
-2. 设置构建命令：`npm run build`
-3. 设置输出目录：`docs/.vitepress/dist`
-
-### 方案三：部署到 Netlify
-
-1. 连接仓库到 Netlify
-2. 设置构建命令：`npm run build`
-3. 设置发布目录：`docs/.vitepress/dist`
-
-## 开发指南
-
-### 编写项目页面
-
-每个项目页面应包含：
-
-- **项目背景**: 问题陈述和行业背景
-- **系统架构**: 架构图和模块概述
-- **核心技术**: 技术深入与代码示例
-- **项目成果**: 量化结果和指标
-- **演示**: 截图、图表或视频
-- **画廊**: 项目图片展示
-
-### 代码示例
-
-使用带语言指定的代码块：
-
-````markdown
-```cpp
-// C++ 代码示例
-class MyClass {
-    // ...
-};
-```
-
-```python
-# Python 代码示例
-def my_function():
-    pass
-```
-````
-
-### 图片
-
-将图片放在 `docs/public/assets/projects/<project-name>/` 目录，使用绝对路径引用（GitHub Pages 上通过 `/assets/...` 访问）：
+2）添加 frontmatter：
 
 ```markdown
-![描述](/assets/projects/project-name/image.png)
+---
+title: 项目名称
+description: 简短描述
+---
 ```
 
-### 画廊图片
+3）更新侧边栏配置：
 
-在每个项目页面的画廊部分添加图片展示：
+```ts
+docs/.vitepress/config.ts
+```
+
+4）更新项目列表：
+
+```text
+docs/projects/index.md
+```
+
+------
+
+## 🎨 自定义
+
+### 主题颜色
+
+编辑：
+
+```text
+docs/.vitepress/theme/styles/custom.css
+:root {
+  --vp-c-brand: #3eaf7c;
+  --vp-c-brand-light: #5bc98f;
+  --vp-c-brand-dark: #2d8f63;
+}
+```
+
+------
+
+### 站点信息
+
+```ts
+export default defineConfig({
+  title: '你的团队名称',
+  description: '你的描述',
+})
+```
+
+------
+
+## 🖼️ 图片与资源规范
+
+### 推荐存放路径
+
+```text
+docs/public/assets/projects/<project-name>/
+```
+
+------
+
+### 引用方式（重要）
+
+```markdown
+![示例](/assets/projects/project-name/image.png)
+```
+
+> ✅ 使用 `/` 开头路径
+> ✅ VitePress 会自动处理 `base`
+> ❌ 不需要写 `/team_portfolio/...`
+
+------
+
+## 🖼️ 画廊示例
 
 ```markdown
 ## 画廊
@@ -206,7 +217,7 @@ def my_function():
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="/assets/projects/project-name/image.png" alt="图片标题" class="gallery-image" />
+    <img src="/assets/projects/project-name/image.png" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>标题</h4>
@@ -217,26 +228,101 @@ def my_function():
 </div>
 ```
 
-## 技术栈
+------
 
-- **框架**: VitePress 1.x
-- **Vue**: 3.x
-- **TypeScript**: 5.x
-- **样式**: 自定义 CSS 与 CSS 变量
+## 🚀 部署
 
-## 系统要求
+### 方案一：GitHub Pages（推荐）
 
-- Node.js >= 18.0.0
-- npm 或 yarn
+#### 1. 安装工具
 
-## 许可证
+```bash
+npm i -D gh-pages
+```
+
+------
+
+#### 2. 构建 + 部署
+
+```bash
+npm run build
+npx gh-pages -d docs/.vitepress/dist -b gh-pages -m "deploy: 本次部署说明"
+```
+
+> ⚠️ 注意：该命令会覆盖 `gh-pages` 分支内容
+
+------
+
+#### 3. 启用 Pages
+
+- Settings → Pages
+- Source: `Deploy from a branch`
+- Branch: `gh-pages`
+- Folder: `/`
+
+------
+
+### 方案二：Vercel
+
+- Build Command: `npm run build`
+- Output Directory: `docs/.vitepress/dist`
+
+------
+
+### 方案三：Netlify
+
+- Build Command: `npm run build`
+- Publish Directory: `docs/.vitepress/dist`
+
+------
+
+## 🧑‍💻 开发指南
+
+### 项目页面建议结构
+
+- 项目背景
+- 系统架构
+- 核心技术
+- 项目成果
+- 演示
+- 画廊
+
+------
+
+### 代码示例
+
+~~~markdown
+```cpp
+class MyClass {};
+```
+
+```python
+def func():
+    pass
+```
+~~~
+
+------
+
+## 🧰 技术栈
+
+- VitePress 1.x
+- Vue 3
+- TypeScript 5
+- CSS Variables
+
+------
+
+## 📄 许可证
 
 MIT
 
-## 贡献
+------
+
+## 🤝 贡献
 
 1. Fork 仓库
-2. 创建功能分支
-3. 提交更改
-4. 推送到分支
-5. 创建 Pull Request
+2. 创建分支
+3. 提交修改
+4. 推送代码
+5. 发起 PR
