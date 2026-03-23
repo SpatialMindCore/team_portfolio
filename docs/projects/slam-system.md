@@ -332,13 +332,13 @@ public:
 
 ### 探索序列
 
-![探索演示](/assets/projects/slam-system/exploration-sequence.png)
+![探索演示](/assets/projects/slam-system/exploration-sequence.jpeg)
 
 *未知仓库环境的自主探索*
 
 ### 飞行测试
 
-![飞行测试](/assets/projects/slam-system/flight-test.png)
+![飞行测试](/assets/projects/slam-system/flight-test.jpg)
 
 *室内飞行测试与实时地图可视化*
 
@@ -358,7 +358,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="/assets/projects/slam-system/exploration-sequence.png" alt="探索序列" class="gallery-image" />
+    <img src="/assets/projects/slam-system/exploration-sequence.jpeg" alt="探索序列" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>自主探索</h4>
@@ -368,7 +368,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="/assets/projects/slam-system/flight-test.png" alt="飞行测试" class="gallery-image" />
+    <img src="/assets/projects/slam-system/flight-test.jpg" alt="飞行测试" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>飞行测试</h4>
@@ -378,7 +378,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/slam-system/1-example1.png" alt="SLAM 示例一" class="gallery-image" />
+    <img src="/assets/projects/slam-system/SLAM_Visualisierung_01.jpg" alt="SLAM 示例一" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>轨迹与地图</h4>
@@ -388,7 +388,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/slam-system/2-example2.png" alt="SLAM 示例二" class="gallery-image" />
+    <img src="/assets/projects/slam-system/architecture-diagram.jpg" alt="SLAM 示例二" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>多楼层场景</h4>
@@ -398,7 +398,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/slam-system/3-example3.png" alt="SLAM 示例三" class="gallery-image" />
+    <img src="/assets/projects/slam-system/exploration-sequence.jpeg" alt="SLAM 示例三" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>复杂障碍环境</h4>
@@ -408,7 +408,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/slam-system/4-example4.png" alt="SLAM 示例四" class="gallery-image" />
+    <img src="/assets/projects/slam-system/flight-test.jpeg" alt="SLAM 示例四" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>户外大范围任务</h4>

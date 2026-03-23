@@ -189,7 +189,7 @@ public:
 
 ### 截图
 
-![3DGS 渲染演示](/assets/projects/3dgs-engine/demo-1.png)
+![3DGS 渲染演示](/assets/projects/3dgs-engine/1-moer-ui.png)
 
 *580 万高斯点实时渲染，89 FPS*
 
@@ -205,7 +205,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="/assets/projects/3dgs-engine/demo-1.png" alt="3DGS 渲染演示" class="gallery-image" />
+    <img src="/assets/projects/3dgs-engine/1-moer-ui.png" alt="3DGS 渲染演示" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>实时渲染演示</h4>
@@ -225,7 +225,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/3dgs-engine/1-moer-ui.png" alt="编辑器 UI" class="gallery-image" />
+    <img src="/assets/projects/3dgs-engine/1-moer-ui.png" alt="编辑器 UI" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>编辑器主界面</h4>
@@ -235,7 +235,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/3dgs-engine/2-data-monitor.png" alt="数据监控" class="gallery-image" />
+    <img src="/assets/projects/3dgs-engine/2-data-monitor.png" alt="数据监控" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>数据监控面板</h4>
@@ -245,7 +245,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/3dgs-engine/3-model-training.png" alt="模型训练" class="gallery-image" />
+    <img src="/assets/projects/3dgs-engine/3-model-training.png" alt="模型训练" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>模型训练视图</h4>
@@ -255,7 +255,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/3dgs-engine/4-model-segmentation.png" alt="模型分割" class="gallery-image" />
+    <img src="/assets/projects/3dgs-engine/4-model-segmentation.png" alt="模型分割" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>模型分割结果</h4>

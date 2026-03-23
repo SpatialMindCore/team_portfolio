@@ -547,25 +547,25 @@ public:
 
 ### 数字孪生界面
 
-![数字孪生 UI](/assets/projects/bridge-system/digital-twin-ui.png)
+![数字孪生 UI](/assets/projects/bridge-system/3-model.jpg)
 
 *3D 桥梁模型上的实时传感器可视化*
 
 ### 警报仪表盘
 
-![警报仪表盘](/assets/projects/bridge-system/alert-dashboard.png)
+![警报仪表盘](/assets/projects/bridge-system/1-dashboard.jpg)
 
 *带有严重性指示器和建议操作的活动警报*
 
 ### VR 检查模式
 
-![VR 检查](/assets/projects/bridge-system/vr-inspection.png)
+![VR 检查](/assets/projects/bridge-system/4-monitor.jpg)
 
 *用于沉浸式桥梁检查的虚拟现实界面*
 
 ### 历史趋势分析
 
-![趋势分析](/assets/projects/bridge-system/trend-analysis.png)
+![趋势分析](/assets/projects/bridge-system/2-report.jpg)
 
 *带有异常检测的多传感器趋势可视化*
 
@@ -575,7 +575,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="/assets/projects/bridge-system/digital-twin-ui.png" alt="数字孪生 UI" class="gallery-image" />
+    <img src="/assets/projects/bridge-system/3-model.jpg" alt="数字孪生 UI" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>数字孪生界面</h4>
@@ -585,7 +585,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="/assets/projects/bridge-system/alert-dashboard.png" alt="警报仪表盘" class="gallery-image" />
+    <img src="/assets/projects/bridge-system/1-dashboard.jpg" alt="警报仪表盘" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>警报仪表盘</h4>
@@ -595,7 +595,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="/assets/projects/bridge-system/vr-inspection.png" alt="VR 检查" class="gallery-image" />
+    <img src="/assets/projects/bridge-system/4-monitor.jpg" alt="VR 检查" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>VR 检查</h4>
@@ -605,7 +605,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="/assets/projects/bridge-system/trend-analysis.png" alt="趋势分析" class="gallery-image" />
+    <img src="/assets/projects/bridge-system/2-report.jpg" alt="趋势分析" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>趋势分析</h4>
@@ -615,7 +615,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/bridge-system/1-dashboard.png" alt="监测总览仪表盘" class="gallery-image" />
+    <img src="/assets/projects/bridge-system/1-dashboard.jpg" alt="监测总览仪表盘" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>监测总览</h4>
@@ -625,7 +625,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/bridge-system/2-report.png" alt="报告页面" class="gallery-image" />
+    <img src="/assets/projects/bridge-system/2-report.jpg" alt="报告页面" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>报告中心</h4>
@@ -635,7 +635,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/bridge-system/3-model.jpg" alt="桥梁 3D 模型" class="gallery-image" />
+    <img src="/assets/projects/bridge-system/3-model.jpg" alt="桥梁 3D 模型" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>高精度 3D 模型</h4>
@@ -645,7 +645,7 @@ public:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/bridge-system/4-monitor.png" alt="监控大屏" class="gallery-image" />
+    <img src="/assets/projects/bridge-system/4-monitor.jpg" alt="监控大屏" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>监控大屏</h4>

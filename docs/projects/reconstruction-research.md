@@ -428,7 +428,7 @@ class GaussianCompressor:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/reconstruction-research/1-example1.png" alt="重建示例一" class="gallery-image" />
+    <img src="/assets/projects/reconstruction-research/1-example1.png" alt="重建示例一" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>重建示例一</h4>
@@ -438,7 +438,7 @@ class GaussianCompressor:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/reconstruction-research/2-example2.png" alt="重建示例二" class="gallery-image" />
+    <img src="/assets/projects/reconstruction-research/2-example2.png" alt="重建示例二" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>重建示例二</h4>
@@ -448,7 +448,7 @@ class GaussianCompressor:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/reconstruction-research/3-example3.png" alt="重建示例三" class="gallery-image" />
+    <img src="/assets/projects/reconstruction-research/3-example3.png" alt="重建示例三" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>重建示例三</h4>
@@ -458,7 +458,7 @@ class GaussianCompressor:
 
 <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/reconstruction-research/4-example4.png" alt="重建示例四" class="gallery-image" />
+    <img src="/assets/projects/reconstruction-research/4-example4.png" alt="重建示例四" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>重建示例四</h4>

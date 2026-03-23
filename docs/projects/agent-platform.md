@@ -520,9 +520,9 @@ class LoRAFineTuner:
   </div>
 </div>
 
-<div class="gallery-item">
+  <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/agent-platform/1-web-dashboard.png" alt="Web 控制台" class="gallery-image" />
+    <img src="/assets/projects/agent-platform/1-web-dashboard.png" alt="Web 控制台" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>Web 控制台</h4>
@@ -530,9 +530,9 @@ class LoRAFineTuner:
   </div>
 </div>
 
-<div class="gallery-item">
+  <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/agent-platform/2-data-management.png" alt="数据管理" class="gallery-image" />
+    <img src="/assets/projects/agent-platform/2-data-management.png" alt="数据管理" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>数据管理中心</h4>
@@ -540,9 +540,9 @@ class LoRAFineTuner:
   </div>
 </div>
 
-<div class="gallery-item">
+  <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/agent-platform/3-Agent-center.png" alt="Agent 中心" class="gallery-image" />
+    <img src="/assets/projects/agent-platform/3-Agent-center.png" alt="Agent 中心" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>Agent 中心</h4>
@@ -550,9 +550,9 @@ class LoRAFineTuner:
   </div>
 </div>
 
-<div class="gallery-item">
+  <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/agent-platform/4-Agent-management.png" alt="Agent 管理" class="gallery-image" />
+    <img src="/assets/projects/agent-platform/4-Agent-management.png" alt="Agent 管理" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>Agent 管理界面</h4>
@@ -560,9 +560,9 @@ class LoRAFineTuner:
   </div>
 </div>
 
-<div class="gallery-item">
+  <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/agent-platform/5-rag.png" alt="RAG 流程" class="gallery-image" />
+    <img src="/assets/projects/agent-platform/5-rag.png" alt="RAG 流程" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>RAG 管线视图</h4>
@@ -570,9 +570,9 @@ class LoRAFineTuner:
   </div>
 </div>
 
-<div class="gallery-item">
+  <div class="gallery-item">
   <div class="gallery-image-wrapper">
-    <img src="../assets/projects/agent-platform/6-report.png" alt="报告页面" class="gallery-image" />
+    <img src="/assets/projects/agent-platform/6-report.png" alt="报告页面" class="gallery-image" />
   </div>
   <div class="gallery-info">
     <h4>自动化报告</h4>

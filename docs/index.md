@@ -42,13 +42,8 @@ function pageUrl(path) {
   return withBase(p)
 }
 
-// 首页画廊图片：必须从 docs/assets 引入（用 import 让 Vite 生成可访问的资源 URL）
-import gallery3dgs from './assets/projects/3dgs-engine/1-moer-ui.png'
-import gallerySlam from './assets/projects/slam-system/1-example1.png'
-import galleryAgent from './assets/projects/agent-platform/1-web-dashboard.png'
-import galleryBridge from './assets/projects/bridge-system/1-dashboard.png'
-import galleryMeasurement from './assets/projects/measurement-system/1-main.png'
-import galleryReconstruction from './assets/projects/reconstruction-research/1-example1.png'
+// 首页画廊（方案 A）：直接使用 public 目录资源
+// 注意：GitHub Pages 部署在子路径下，因此使用 withBase 拼接站点 base
 
 const projects = [
   {
@@ -91,37 +86,37 @@ const projects = [
 
 const galleryImages = [
   {
-    src: gallery3dgs,
+    src: withBase('/assets/projects/3dgs-engine/1-moer-ui.png'),
     title: '3DGS 引擎编辑器',
     description: '多视图渲染与训练一体化编辑界面',
     project: pageUrl('/projects/3dgs-engine')
   },
   {
-    src: gallerySlam,
+    src: withBase('/assets/projects/slam-system/exploration-sequence.jpeg'),
     title: '无人机 SLAM 轨迹',
     description: '语义 SLAM 在复杂环境中的实时探索',
     project: pageUrl('/projects/slam-system')
   },
   {
-    src: galleryAgent,
+    src: withBase('/assets/projects/agent-platform/dashboard.png'),
     title: 'Agent 平台 Web 控制台',
     description: '多智能体任务与系统状态总览',
     project: pageUrl('/projects/agent-platform')
   },
   {
-    src: galleryBridge,
+    src: withBase('/assets/projects/bridge-system/1-dashboard.jpg'),
     title: '桥梁监测总览',
     description: '关键传感器状态与健康评分仪表盘',
     project: pageUrl('/projects/bridge-system')
   },
   {
-    src: galleryMeasurement,
+    src: withBase('/assets/projects/measurement-system/1-main.png'),
     title: '三维测量主界面',
     description: '从重建到标注的一站式测量工作流',
     project: pageUrl('/projects/measurement-system')
   },
   {
-    src: galleryReconstruction,
+    src: withBase('/assets/projects/reconstruction-research/semantic-fusion.png'),
     title: '高斯重建示例',
     description: '高质量三维重建与渲染研究结果',
     project: pageUrl('/projects/reconstruction-research')
