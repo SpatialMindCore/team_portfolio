@@ -29,6 +29,7 @@
 ```bash
 git clone git@github.com:SpatialMindCore/team_portfolio.git
 cd team_portfolio
+```
 
 ------
 
