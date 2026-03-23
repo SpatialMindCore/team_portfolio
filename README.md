@@ -229,7 +229,7 @@ docs/public/assets/projects/<project-name>/
 
 ### 方案一：GitHub Pages（推荐）
 
-#### 1. 安装工具
+#### 1. 安装工具（仅第一次运行时需要安装）
 
 ```bash
 npm i -D gh-pages
