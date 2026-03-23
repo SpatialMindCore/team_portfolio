@@ -134,28 +134,22 @@ export default defineConfig({
 
 ## ➕ 添加新项目
 
-1）在 `docs/projects/` 创建 Markdown 文件
+1）创建新文件：在 `docs/projects/` 目录下创建 `your-project.md`
 
-2）添加 frontmatter：
+2）添加 frontmatter（文件开头）：
 
-```markdown
+```
 ---
-title: 项目名称
-description: 简短描述
+title: 你的项目名称
+description: 一句话描述项目
 ---
 ```
 
-3）更新侧边栏配置：
+3）编写项目内容：按照模板编写正文
 
-```ts
-docs/.vitepress/config.ts
-```
+4）更新项目列表：编辑 `docs/projects/index.md`，在 `<script setup>` 的 projects 数组中添加新项目的元数据
 
-4）更新项目列表：
-
-```text
-docs/projects/index.md
-```
+5）更新侧边栏：编辑 `.vitepress/config.ts`，在侧边栏配置中添加新项目链接
 
 ------
 
