@@ -1,12 +1,10 @@
 # 部署到 GitHub Pages
 
-仓库：**`https://github.com/Ylin97/team_portfolio`**
-
 本项目已在 `docs/.vitepress/config.ts` 设置：
 - `base: '/team_portfolio/'`
 - `cleanUrls: true`（GitHub Pages 支持目录型访问，不需要 `.html` 后缀）
 
-站点地址（通常）：**`https://Ylin97.github.io/team_portfolio/`**
+站点地址（通常）：**`https://spatialmindcore.github.io/team_portfolio/`**
 
 ## 1. 本地构建
 
@@ -43,8 +41,17 @@ npm i -D gh-pages
 
 部署：
 ```bash
-npx gh-pages -d docs/.vitepress/dist
+npx gh-pages -d docs/.vitepress/dist -b gh-pages -m "deploy: switch homepage gallery to public"
 ```
+
+**参数说明：**
+
+| 参数                                             | 含义         | 说明                                                         |
+| ------------------------------------------------ | ------------ | ------------------------------------------------------------ |
+| `npx gh-pages`                                   | 执行部署工具 | 使用 npx 临时运行 gh-pages 工具（无需全局安装），用于发布静态文件到 GitHub Pages |
+| `-d docs/.vitepress/dist`                        | 指定发布目录 | 要部署的静态文件目录，一般为 VitePress 构建输出目录          |
+| `-b gh-pages`                                    | 指定目标分支 | 将内容推送到 `gh-pages` 分支，GitHub Pages 默认从该分支提供网站服务 |
+| `-m "deploy: switch homepage gallery to public"` | 提交信息     | 本次部署的 Git commit message，仅用于说明本次更新内容        |
 
 ## 3. GitHub 上开启 Pages
 
